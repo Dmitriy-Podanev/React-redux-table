@@ -1,9 +1,9 @@
 
 import { Action as ActionRedux } from 'redux'
-import {AppAction} from "./appAction";
+import {AppActionEnum} from "./appActionEnum";
 
 
-export declare namespace Appstate{
+export declare namespace AppState{
     interface State {
         isLoading: boolean;
         dataM: object[];
@@ -12,8 +12,13 @@ export declare namespace Appstate{
 
 
     }
-}
 
-namespace Action{
-    type AddUser = ActionRedux<AppAction.addUser> & {}
+
+    namespace Action{
+        type addUser = ActionRedux<AppActionEnum.addUser>
+        type deleteUser = ActionRedux<AppActionEnum.deleteUser>
+        type changeUser = ActionRedux<AppActionEnum.changeUser>
+
+        type All = addUser | deleteUser | changeUser
+    }
 }

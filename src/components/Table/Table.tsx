@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     },
 });
 
-export const table: React.FC<Props> = () => (
+export const Table: React.FC<Props> = () => (
     <table className="table">
         <thead>
         <tr>
