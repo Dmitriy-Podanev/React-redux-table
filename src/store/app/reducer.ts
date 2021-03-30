@@ -16,6 +16,11 @@ export const AppReducer: Reducer<AppState.State, AppState.Action.All> = (state =
                 ...state, isLoading: true,
 
             }
+        case AppActionEnum.changeUser:
+            return {
+                ...state, isLoading: true,
+
+            }
 
     }
     return state
