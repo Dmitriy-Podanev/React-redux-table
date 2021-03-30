@@ -9,8 +9,12 @@ const initState: AppState.State = {
     res: []
 }
 
-export const AppReducer: Reducer<AppState.State, AppState.Action.All> = (state = initState, action) => {
+export const userReducer: Reducer<AppState.State, AppState.userAction.All> = (state = initState, action: AppState.userAction.All): AppState.State => {
     switch (action.type) {
+        case AppActionEnum.getUsers:
+            return{
+                ...state
+            }
         case AppActionEnum.addUser:
             return {
                 ...state, isLoading: true,
@@ -18,8 +22,12 @@ export const AppReducer: Reducer<AppState.State, AppState.Action.All> = (state =
             }
         case AppActionEnum.changeUser:
             return {
-                ...state, isLoading: true,
+                ...state
 
+            }
+        case AppActionEnum.deleteUser:
+            return{
+                ...state, isLoading:true,
             }
 
     }

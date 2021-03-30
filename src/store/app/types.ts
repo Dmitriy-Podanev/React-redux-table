@@ -14,11 +14,12 @@ export declare namespace AppState{
     }
 
 
-    namespace Action{
-        type addUser = ActionRedux<AppActionEnum.addUser>
-        type deleteUser = ActionRedux<AppActionEnum.deleteUser>
-        type changeUser = ActionRedux<AppActionEnum.changeUser>
+    namespace userAction{
+        type getUsers = ActionRedux<AppActionEnum.getUsers> & {payload:[]}
+        type addUser = ActionRedux<AppActionEnum.addUser> & {payload:undefined}
+        type deleteUser = ActionRedux<AppActionEnum.deleteUser> & {payload:number}
+        type changeUser = ActionRedux<AppActionEnum.changeUser> & {payload:undefined}
 
-        type All = addUser | deleteUser | changeUser
+        type All = getUsers | addUser | deleteUser | changeUser
     }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 
 import {makeStyles} from '@material-ui/core/styles';
+import { useSelector } from "react-redux";
 
 interface Props {
 
@@ -12,7 +13,12 @@ const useStyles = makeStyles({
     },
 });
 
-export const Table: React.FC<Props> = () => (
+export const Table: React.FC<Props> = () => {
+
+    const state = useSelector(state =>state)
+    console.log(state);
+    
+    return(    
     <table className="table">
         <thead>
         <tr>
@@ -26,4 +32,5 @@ export const Table: React.FC<Props> = () => (
 
 
     </table>
-);
+    )
+};
