@@ -15,10 +15,10 @@ export declare namespace AppState{
 
 
     namespace userAction{
-        type getUsers = ActionRedux<AppActionEnum.getUsers> & {payload:[]}
-        type addUser = ActionRedux<AppActionEnum.addUser> & {payload:undefined}
+        type getUsers = ActionRedux<AppActionEnum.getUsers> & {payload:object}
+        type addUser = ActionRedux<AppActionEnum.addUser> & {payload:object}
         type deleteUser = ActionRedux<AppActionEnum.deleteUser> & {payload:number}
-        type changeUser = ActionRedux<AppActionEnum.changeUser> & {payload:undefined}
+        type changeUser = ActionRedux<AppActionEnum.changeUser> & {payload:object}
 
         type All = getUsers | addUser | deleteUser | changeUser
     }

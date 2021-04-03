@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {makeStyles} from '@material-ui/core/styles';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { UserFetch } from "../../store/userFetch";
+
 
 interface Props {
 
@@ -14,23 +16,37 @@ const useStyles = makeStyles({
 });
 
 export const Table: React.FC<Props> = () => {
-
     const state = useSelector(state =>state)
-    console.log(state);
+   
+    const dispatch = useDispatch()
+
+
     
+    useEffect(()=>{
+        dispatch(UserFetch())
+    },[])
+
+    if(state.isLoading){
+        return <h1>Загрузка</h1>
+    }
+  
     return(    
-    <table className="table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>E-mail</th>
-            <th>Age</th>
 
-        </tr>
-        </thead>
+        <div>
+            state.data
+        </div>
+    // <table className="table">
+    //     <thead>
+    //     <tr>
+    //         <th>ID</th>
+    //         <th>First Name</th>
+    //         <th>E-mail</th>
+    //         <th>Age</th>
+
+    //     </tr>
+    //     </thead>
 
 
-    </table>
+    // </table>
     )
 };

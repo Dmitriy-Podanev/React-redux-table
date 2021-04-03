@@ -3,16 +3,24 @@ import { AppState } from "./app/types";
 import axios from 'axios'
 import { type } from "os";
 import { appGetUsers } from "./app/action";
+import { store } from "./app/store";
+import { LOADIPHLPAPI } from "node:dns";
 
 
 
 
-export const userFetch = () = >{
-    return async (dispatch:Dispatch<AppState.userAction.getUsers>) => {
+
+export const UserFetch = ()=>{
+    return async (dispatch :Dispatch<AppState.userAction.All>) =>{
         try{
-           const response  = await axios.get("http://178.128.196.163:3000/api/records");
-           dispatch() 
+        
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users")
+        dispatch(appGetUsers(response.data))
+
         }
-        catch(e){}
+        catch(e){
+            console.log("что-то не так ");
+            
+        }
     }
 }
