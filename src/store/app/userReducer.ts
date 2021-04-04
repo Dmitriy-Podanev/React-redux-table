@@ -1,19 +1,23 @@
 import {Reducer} from 'redux'
-import {AppState} from "./types";
+import {AppState} from "./userTypes";
 import {AppActionEnum} from "./appActionEnum";
 
 const initState: AppState.State = {
     isLoading: false,
-    dataM: [],
-    editId: -1,
-    res: []
-}
+    data:{
+        userId: -1,
+        title:"", 
+        body:""}
+    }
+    
 
 export const userReducer: Reducer<AppState.State, AppState.userAction.All> = (state = initState, action: AppState.userAction.All): AppState.State => {
     switch (action.type) {
         case AppActionEnum.getUsers:
             return{
-                ...state
+                ...state,
+               data:action.payload
+
             }
         case AppActionEnum.addUser:
             return {

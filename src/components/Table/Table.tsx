@@ -26,14 +26,18 @@ export const Table: React.FC<Props> = () => {
         dispatch(UserFetch())
     },[])
 
-    if(state.isLoading){
-        return <h1>Загрузка</h1>
-    }
+    // if(state.){
+    //     return <h1>Загрузка</h1>
+    // }
   
     return(    
 
         <div>
-            state.data
+            state.map(item =>{
+                <div>
+                    "asd"
+                </div>
+            })
         </div>
     // <table className="table">
     //     <thead>
