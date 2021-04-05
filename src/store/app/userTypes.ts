@@ -6,9 +6,14 @@ import {AppActionEnum} from "./appActionEnum";
 export declare namespace AppState{
     interface State {
         isLoading: boolean;
-        dataM: object[];
-        editId: number;
-        res:object[];
+        data?:{
+            userId: number,
+            id:number
+            title: string,
+            body: string
+        }
+        dataM:object[]
+        
 
 
     }
