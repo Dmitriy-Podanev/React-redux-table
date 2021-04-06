@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9746779d-9970-4c25-9e8d-8b50a9502c79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/app/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/app/userTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/app/userTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/userFetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/userFetch.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +81,8 @@
       <workItem from="1616931486485" duration="3176000" />
       <workItem from="1616938615568" duration="2479000" />
       <workItem from="1616956845269" duration="2593000" />
+      <workItem from="1617694098881" duration="63000" />
+      <workItem from="1617730123905" duration="536000" />
     </task>
     <servers />
   </component>
@@ -102,25 +101,25 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1616837110041" />
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom" timestamp="1616945046019">
+    <state width="724" height="194" key="GridCell.Tab.0.bottom" timestamp="1617730665301">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1616945046019" />
-    <state width="1493" height="192" key="GridCell.Tab.0.center" timestamp="1616945046019">
+    <state width="724" height="194" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1617730665301" />
+    <state width="724" height="194" key="GridCell.Tab.0.center" timestamp="1617730665300">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1616945046019" />
-    <state width="1493" height="192" key="GridCell.Tab.0.left" timestamp="1616945046019">
+    <state width="724" height="194" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1617730665300" />
+    <state width="724" height="194" key="GridCell.Tab.0.left" timestamp="1617730665300">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1616945046019" />
-    <state width="1493" height="192" key="GridCell.Tab.0.right" timestamp="1616945046019">
+    <state width="724" height="194" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1617730665300" />
+    <state width="724" height="194" key="GridCell.Tab.0.right" timestamp="1617730665300">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1616945046019" />
-    <state x="440" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1616956843583">
+    <state width="724" height="194" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1617730665300" />
+    <state x="440" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1617730125760">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="440" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1616956843583" />
+    <state x="440" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1617730125760" />
   </component>
 </project>

@@ -30,21 +30,17 @@ export const Table: React.FC<Props> = () => {
     //     return <h1>Загрузка</h1>
     // }
     console.log(userState.dataM);
-    Object.keys(userState.dataM)
+    Object.keys(userState.dataM);
     console.log(Object.keys(userState.dataM));
-    
-   
-  
-    
-    
-    return(    
+
+
+
+
+
+    return(
 
         <div>
-           {userState.dataM.map(user => (
-               <div key = {user.id}>
-                   <div>{user.body}</div>
-               </div>
-           ))}
+           {userState.dataM.map(user =>(<div>{user}</div>))}
           
         </div>
     // <table className="table">

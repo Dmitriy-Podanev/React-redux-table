@@ -14,8 +14,11 @@ export const UserFetch = ()=>{
     return async (dispatch :Dispatch<AppState.userAction.All>) =>{
         try{
         
-        const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
-        dispatch(appGetUsers(response.data))
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users")
+      
+        dispatch(appGetUsers( response.data))
+      
+        
 
         }
         catch(e){
