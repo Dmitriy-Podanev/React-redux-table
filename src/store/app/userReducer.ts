@@ -4,12 +4,8 @@ import {AppActionEnum} from "./appActionEnum";
 
 const initState: AppState.State = {
     isLoading: false,
-    data:{
-        userId: -1,
-        id: -1,
-        title:"", 
-        body:""},
-    dataM:[]
+    data:[]
+    // dataM:[]
     }
     
 
@@ -18,7 +14,7 @@ export const userReducer: Reducer<AppState.State, AppState.userAction.All> = (st
         case AppActionEnum.getUsers:
             return{
                 ...state,
-               dataM: action.payload
+               data: action.payload
 
             }
         case AppActionEnum.addUser:

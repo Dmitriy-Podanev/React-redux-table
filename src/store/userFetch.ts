@@ -1,29 +1,27 @@
-import { Dispatch } from "react";
-import { AppState } from "./app/userTypes";
+import {Dispatch} from "react";
+import {AppState} from "./app/userTypes";
 import axios from 'axios'
-import { type } from "os";
-import { appGetUsers } from "./app/action";
-import { store } from "./app/store";
-import { LOADIPHLPAPI } from "node:dns";
+
+import {appGetUsers} from "./app/action";
+import {AppActionEnum} from "./app/appActionEnum";
 
 
 
+export const UserFetch = () => {
+    return async (dispatch: Dispatch<AppState.userAction.All>) => {
+        try {
 
+           const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
+            console.log(typeof response.data)
 
-export const UserFetch = ()=>{
-    return async (dispatch :Dispatch<AppState.userAction.All>) =>{
-        try{
-        
-        const response = await axios.get("https://jsonplaceholder.typicode.com/users")
-      
-        dispatch(appGetUsers( response.data))
-      
-        
+            // dispatch(appGetUsers(response.data))
+            const data:AppState.userTypes[] = response.data
 
-        }
-        catch(e){
-            console.log("что-то не так ");
-            
+            dispatch(appGetUsers(data))
+
+        } catch (e) {
+            // dispatch(AppActionEnum.ERROR)
+
         }
     }
 }

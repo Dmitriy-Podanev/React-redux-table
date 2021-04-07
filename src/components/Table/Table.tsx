@@ -6,6 +6,7 @@ import { UserFetch } from "../../store/userFetch";
 import { RootStore } from "../../store/app/store";
 
 
+
 interface Props {
 
 }
@@ -26,35 +27,25 @@ export const Table: React.FC<Props> = () => {
         dispatch(UserFetch())
     },[])
 
-    // if(state.){
-    //     return <h1>Загрузка</h1>
-    // }
-    console.log(userState.dataM);
-    Object.keys(userState.dataM);
-    console.log(Object.keys(userState.dataM));
-
-
-
-
 
     return(
 
-        <div>
-           {userState.dataM.map(user =>(<div>{user}</div>))}
-          
-        </div>
-    // <table className="table">
-    //     <thead>
-    //     <tr>
-    //         <th>ID</th>
-    //         <th>First Name</th>
-    //         <th>E-mail</th>
-    //         <th>Age</th>
+        <table>
+            <tbody>
+            {
 
-    //     </tr>
-    //     </thead>
+                userState.data?.map(itemKey => {
+                    console.log(itemKey)
+                    return (
+                        <tr key={itemKey.id} >
+                            <td>{itemKey.body}</td>
 
+                        </tr>
+                    )
+                })
+            }
+            </tbody>
+        </table>
 
-    // </table>
     )
 };
