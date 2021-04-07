@@ -3,6 +3,6 @@ export enum AppActionEnum {
     deleteUser = "app/deleteUser",
     changeUser = "app/changeUser",
     getUsers = "app/getUsers",
-    ERROR = "ERROR"
+    ERROR = "app/error"
 
 }

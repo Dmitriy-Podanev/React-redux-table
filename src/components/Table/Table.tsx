@@ -1,44 +1,50 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 
 import {makeStyles} from '@material-ui/core/styles';
-import { useDispatch, useSelector } from "react-redux";
-import { UserFetch } from "../../store/userFetch";
-import { RootStore } from "../../store/app/store";
-
+import {useDispatch, useSelector} from "react-redux";
+import {UserFetch} from "../../store/userFetch";
+import {RootStore} from "../../store/app/store";
+import {TextField} from "@material-ui/core";
 
 
 interface Props {
 
 }
 
-const useStyles = makeStyles({
-    table: {
-        minWidth: 650,
-    },
-});
 
 export const Table: React.FC<Props> = () => {
-    const userState = useSelector((state:RootStore ) => state.user)
+    const userState = useSelector((state: RootStore) => state.user)
     const dispatch = useDispatch()
-    
 
-    
-    useEffect(()=>{
+
+    useEffect(() => {
         dispatch(UserFetch())
-    },[])
+    }, [])
 
 
-    return(
+    return (
 
         <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>E-mail</th>
+                <th>Age</th>
+
+            </tr>
+            </thead>
             <tbody>
             {
 
                 userState.data?.map(itemKey => {
                     console.log(itemKey)
                     return (
-                        <tr key={itemKey.id} >
-                            <td>{itemKey.body}</td>
+                        <tr key={itemKey._id}>
+                            <td> {itemKey._id}</td>
+                            <td><TextField defaultValue={itemKey.data.name}/></td>
+                            <td><TextField defaultValue={itemKey.data.age}/></td>
+                            <td><TextField defaultValue={itemKey.data.email}/></td>
 
                         </tr>
                     )

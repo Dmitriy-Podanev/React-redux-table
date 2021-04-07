@@ -4,17 +4,26 @@ import {AppActionEnum} from "./appActionEnum";
 
 export declare namespace AppState {
 
+    // interface userTypes{
+    //     userId: number,
+    //     id: number,
+    //     title: string,
+    //     body: string
+    // }
     interface userTypes{
-        userId: number,
-        id: number,
-        title: string,
-        body: string
-    }
+        _id: number,
+        data:{
+            name:string,
+            email:string,
+            age:string
+        }
 
+    }
 
     interface State {
         isLoading: boolean;
         data?: userTypes[]
+        error: string
         // dataM: object[]
     }
 
@@ -28,7 +37,7 @@ export declare namespace AppState {
         type addUser = ActionRedux<AppActionEnum.addUser> & { payload: object }
         type deleteUser = ActionRedux<AppActionEnum.deleteUser> & { payload: number }
         type changeUser = ActionRedux<AppActionEnum.changeUser> & { payload: object }
-        type ERROR = ActionRedux<AppActionEnum.ERROR>
+        type ERROR = ActionRedux<AppActionEnum.ERROR> & {payload: string}
 
         type All = getUsers | addUser | deleteUser | changeUser | ERROR
     }

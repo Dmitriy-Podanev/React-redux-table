@@ -4,7 +4,8 @@ import {AppActionEnum} from "./appActionEnum";
 
 const initState: AppState.State = {
     isLoading: false,
-    data:[]
+    data:[],
+    error:""
     // dataM:[]
     }
     
@@ -31,7 +32,11 @@ export const userReducer: Reducer<AppState.State, AppState.userAction.All> = (st
             return{
                 ...state, isLoading:true,
             }
-
+        case AppActionEnum.ERROR:
+            return {
+                ...state,
+                error: action.payload
+            }
     }
     return state
 }
