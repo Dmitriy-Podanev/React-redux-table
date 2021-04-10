@@ -4,12 +4,7 @@ import {AppActionEnum} from "./appActionEnum";
 
 export declare namespace AppState {
 
-    // interface userTypes{
-    //     userId: number,
-    //     id: number,
-    //     title: string,
-    //     body: string
-    // }
+
     interface userTypes{
         _id: number,
         data:{
@@ -18,6 +13,13 @@ export declare namespace AppState {
             age:string
         }
 
+    }
+
+    interface userTypesAddForm{
+
+        name:string,
+        email:string,
+        age:string
     }
 
     interface State {

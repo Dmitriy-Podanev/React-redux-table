@@ -1,21 +1,22 @@
 import React from 'react';
-import { Provider, useStore } from 'react-redux';
-import {Header} from "./components/Header/Header";
-import {Table} from "./components/Table/Table";
-import { store } from './store/app/store';
+import {Provider} from 'react-redux';
+import {store} from './store/app/store';
+import {Routes} from "./Pages/Routes";
+import {Router} from 'react-router-dom';
+import {browserHistory} from "./browserHistory";
+
 
 export function App() {
 
-  return (
-    <div className="App">
-      <Provider store = {store}>
-
-      <Header/>
-      <Table/>
-    
-      </Provider>
-      </div>  
-  );
+    return (
+        <div className="App">
+            <Provider store={store}>
+                <Router history={browserHistory}>
+                    <Routes/>
+                </Router>
+            </Provider>
+        </div>
+    );
 }
 
 

@@ -1,10 +1,8 @@
 import React, {useEffect} from "react";
-
-import {makeStyles} from '@material-ui/core/styles';
 import {useDispatch, useSelector} from "react-redux";
 import {UserFetch} from "../../store/userFetch";
 import {RootStore} from "../../store/app/store";
-import {TextField} from "@material-ui/core";
+import {nextPath} from "../../browserHistory";
 
 
 interface Props {
@@ -20,6 +18,7 @@ export const Table: React.FC<Props> = () => {
     useEffect(() => {
         dispatch(UserFetch())
     }, [])
+
 
 
     return (
@@ -42,15 +41,16 @@ export const Table: React.FC<Props> = () => {
                     return (
                         <tr key={itemKey._id}>
                             <td> {itemKey._id}</td>
-                            <td><TextField defaultValue={itemKey.data.name}/></td>
-                            <td><TextField defaultValue={itemKey.data.age}/></td>
-                            <td><TextField defaultValue={itemKey.data.email}/></td>
+                            <td>{itemKey.data.name}</td>
+                            <td>{itemKey.data.age}</td>
+                            <td>{itemKey.data.email}</td>
 
                         </tr>
                     )
                 })
             }
             </tbody>
+            <button onClick={()=> nextPath("/userForm")}>Добавить Нового Пользователя </button>
         </table>
 
     )
