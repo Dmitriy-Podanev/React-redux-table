@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {UserFetch} from "../../store/userFetch";
+import {UsersFetch} from "../../store/usersFetch";
 import {RootStore} from "../../store/app/store";
 import {nextPath} from "../../browserHistory";
 
@@ -16,7 +16,7 @@ export const Table: React.FC<Props> = () => {
 
 
     useEffect(() => {
-        dispatch(UserFetch())
+        dispatch(UsersFetch())
     }, [])
 
 

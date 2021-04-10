@@ -7,7 +7,7 @@ import {AppActionEnum} from "./app/appActionEnum";
 
 
 
-export const UserFetch = () => {
+export const UsersFetch = () => {
     return async (dispatch: Dispatch<AppState.userAction.All>) => {
         try {
 
@@ -26,3 +26,4 @@ export const UserFetch = () => {
         }
     }
 }
+

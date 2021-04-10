@@ -16,7 +16,7 @@ export declare namespace AppState {
     }
 
     interface userTypesAddForm{
-
+        _id: number
         name:string,
         email:string,
         age:string
@@ -40,7 +40,8 @@ export declare namespace AppState {
         type deleteUser = ActionRedux<AppActionEnum.deleteUser> & { payload: number }
         type changeUser = ActionRedux<AppActionEnum.changeUser> & { payload: object }
         type ERROR = ActionRedux<AppActionEnum.ERROR> & {payload: string}
+        type getUserid = ActionRedux<AppActionEnum.getUserid> & {payload: userTypesAddForm}
 
-        type All = getUsers | addUser | deleteUser | changeUser | ERROR
+        type All = getUsers | addUser | deleteUser | changeUser | ERROR | getUserid
     }
 }

@@ -18,25 +18,12 @@ export const userReducer: Reducer<AppState.State, AppState.userAction.All> = (st
                data: action.payload
 
             }
-        case AppActionEnum.addUser:
+        case AppActionEnum.getUserid:
             return {
-                ...state, isLoading: true,
+                ...state.data?.find(obj =>obj._id === action.payload._id )
 
             }
-        case AppActionEnum.changeUser:
-            return {
-                ...state
 
-            }
-        case AppActionEnum.deleteUser:
-            return{
-                ...state, isLoading:true,
-            }
-        case AppActionEnum.ERROR:
-            return {
-                ...state,
-                error: action.payload
-            }
     }
     return state
 }
