@@ -18,11 +18,11 @@ export const userReducer: Reducer<AppState.State, AppState.userAction.All> = (st
                data: action.payload
 
             }
-        case AppActionEnum.getUserid:
-            return {
-                ...state.data?.find(obj =>obj._id === action.payload._id )
-
-            }
+        // case AppActionEnum.getUserid:
+        //     return {
+        //
+        //
+        //     }
 
     }
     return state

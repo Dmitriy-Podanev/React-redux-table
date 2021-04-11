@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9746779d-9970-4c25-9e8d-8b50a9502c79" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/UserForm/UserForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/UserForm/UserForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/app/appActionEnum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/app/appActionEnum.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/app/userReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/app/userReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/app/userTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/app/userTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/userFetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/usersFetch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/usersFetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/usersFetch.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="tsconfig.json" />
         <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -88,7 +90,7 @@
       <workItem from="1617804200621" duration="18800000" />
       <workItem from="1617878095659" duration="3227000" />
       <workItem from="1617893768389" duration="173000" />
-      <workItem from="1618046205749" duration="10045000" />
+      <workItem from="1618046205749" duration="12997000" />
     </task>
     <servers />
   </component>
@@ -107,22 +109,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1616837110041" />
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1618053146437">
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1618061743450">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618053146437" />
-    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1618053146437">
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618061743450" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1618061743450">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618053146437" />
-    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1618053146437">
+    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618061743450" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1618061743450">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618053146437" />
-    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1618053146437">
+    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618061743450" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1618061743450">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618053146437" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618061743450" />
     <state x="568" y="42" key="RollbackChangesDialog" timestamp="1617809900152">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

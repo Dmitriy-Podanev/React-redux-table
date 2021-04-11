@@ -1,7 +1,8 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom"
+import { UserFrom } from "../components/Forms/UserForm/UserForm";
 import {Table} from "../components/Table/Table";
-import {editUserForm} from "./addNewUser/EditUserForm";
+
 
 interface Props {
 
@@ -12,7 +13,7 @@ export const Routes: React.FC<Props> = () => {
 
             <Switch>
                 <Route path={"/"} exact component={Table}/>
-                <Route path={"/userForm"} exact component={editUserForm}/>
+                <Route path={"/userForm"} exact component={UserFrom}/>
             </Switch>
 
     )
