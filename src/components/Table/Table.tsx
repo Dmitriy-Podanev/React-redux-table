@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {UsersFetch} from "../../store/usersFetch";
+import {UsersFetch} from "../../store/app/userApi/usersFetch";
 import {RootStore} from "../../store/app/store";
 import {nextPath} from "../../browserHistory";
 

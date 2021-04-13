@@ -1,8 +1,8 @@
 import {Dispatch} from "react";
-import {AppState} from "./app/userTypes";
+import {AppState} from "../userTypes";
 import axios from 'axios'
 
-import {appGetUsers, ERROR} from "./app/action";
+import {appGetUsers, ERROR} from "../action";
 
 
 

@@ -4,6 +4,8 @@ import React from "react";
 import * as Yup from 'yup'
 import {AppState} from "../../../store/app/userTypes";
 import {useFormik} from "formik";
+import {addUser} from "../../../store/app/userApi/addUser";
+import {browserHistory} from "../../../browserHistory";
 
 
 interface Props {
@@ -26,41 +28,38 @@ export const UserFrom : React.FC<Props> = (className ='',data:AppState.userTypes
         initialValues: {
             // name: data?.name ?? ''
 
-            name: data.data.name,
-            age: data.data.age,
-            email:data.data.age
+            name: "",
+            age: "",
+            email:""
         },
         validationSchema: schema,
         onSubmit: async (fields) => {
             try {
-                let id: number
-                setLoading(true)
-                if (data) {
-                    id = data.id
-                    await apiLanguageUpdate({ ...data, ...fields })
-                } else {
-                    const res = await apiLanguageCreate(fields)
-                    id = res.id
-                }
-                browserHistory.push(`/ref/languages/${id}`)
-            } catch (err) {
-                setErrorText(err.message)
-            } finally {
-                setLoading(false)
+                const data = {data: {...values}}
+                addUser(data)
+                browserHistory.goBack()
             }
+            catch (e) {
+                alert("asd")
+            }
+
+
+
+
         }
     })
 
-    const handlerSubmit: MouseEventHandler<HTMLButtonElement> = event => {
-        event.preventDefault()
-        submitForm().catch()
-    }
+    // const handlerSubmit: MouseEventHandler<HTMLButtonElement> = event => {
+    //     event.preventDefault()
+    //     submitForm().catch()
+    // }
 
     return (
         <form className ={b()}>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
+            <input type="name" name={"name"} onChange={handleChange}/>
+            <input type="age" name={"age"} onChange={handleChange}/>
+            <input type="email" name={"email"} onChange={handleChange}/>
+            <button type="submit">Добавить</button>
         </form>
     )
 }
