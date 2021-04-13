@@ -11,9 +11,8 @@ export const addUser =  (data: object)  => {
 
             // await axios.put("http://178.128.196.163:3000/api/records", data, ) //todo выбрать лучший метод
             await axios({
-                method: 'PUT',
-                url: 'http://178.128.196.163:3000/api/records',
-                data: data
+                method: 'DELETE',
+                url: `http://178.128.196.163:3000/api/records/${data}`
             });
         } catch (e) {
 

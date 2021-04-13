@@ -26,7 +26,6 @@ export declare namespace AppState {
         isLoading: boolean;
         data?: userTypes[]
         error: string
-        // dataM: object[]
     }
 
 

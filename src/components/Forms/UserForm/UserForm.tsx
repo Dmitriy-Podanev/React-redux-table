@@ -6,6 +6,7 @@ import {AppState} from "../../../store/app/userTypes";
 import {useFormik} from "formik";
 import {addUser} from "../../../store/app/userApi/addUser";
 import {browserHistory} from "../../../browserHistory";
+import axios from "axios";
 
 
 interface Props {
@@ -21,12 +22,11 @@ const schema : Yup.SchemaOf<AppState.userTypesAddForm> = Yup.object().shape(({
     name: Yup.string().required('Обязательно')
 }))
 
-export const UserFrom : React.FC<Props> = (className ='',data:AppState.userTypes) =>{
+export const UserForm : React.FC<Props> = (className ='', data:AppState.userTypes) =>{
 
 
     const { errors, values, submitForm, handleChange } = useFormik<AppState.userTypesAddForm>({
         initialValues: {
-            // name: data?.name ?? ''
 
             name: "",
             age: "",
@@ -36,26 +36,21 @@ export const UserFrom : React.FC<Props> = (className ='',data:AppState.userTypes
         onSubmit: async (fields) => {
             try {
                 const data = {data: {...values}}
-                addUser(data)
-                browserHistory.goBack()
+                addUser(data);
+               // await addUser(data)
             }
             catch (e) {
-                alert("asd")
+                alert("asd") //todo dispatch(ERROR)
             }
-
-
-
-
         }
     })
-
     // const handlerSubmit: MouseEventHandler<HTMLButtonElement> = event => {
     //     event.preventDefault()
     //     submitForm().catch()
     // }
 
     return (
-        <form className ={b()}>
+        <form className ={b()} onSubmit={submitForm}>
             <input type="name" name={"name"} onChange={handleChange}/>
             <input type="age" name={"age"} onChange={handleChange}/>
             <input type="email" name={"email"} onChange={handleChange}/>

@@ -44,7 +44,7 @@ export const Table: React.FC<Props> = () => {
                             <td>{itemKey.data.name}</td>
                             <td>{itemKey.data.age}</td>
                             <td>{itemKey.data.email}</td>
-                            <td><button>Edit</button></td>
+                            <td><button onClick={()=> nextPath("/userForm")}>Edit</button></td>
 
                         </tr>
                     )
