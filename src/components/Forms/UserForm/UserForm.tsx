@@ -1,5 +1,5 @@
 import { block } from "bem-cn";
-import React from "react";
+import React, {useEffect} from "react";
 
 import * as Yup from 'yup'
 import {AppState} from "../../../store/app/userTypes";
@@ -7,11 +7,17 @@ import {useFormik} from "formik";
 import {addUser} from "../../../store/app/userApi/addUser";
 import {browserHistory} from "../../../browserHistory";
 import axios from "axios";
+import {RouteComponentProps} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {UsersFetch} from "../../../store/app/userApi/usersFetch";
 
 
 interface Props {
-    
+    className?: string;
+     data: AppState.userTypesAddForm | null;
+    // data: object
 }
+
 
 const b =block("UserForm");
 
@@ -22,32 +28,32 @@ const schema : Yup.SchemaOf<AppState.userTypesAddForm> = Yup.object().shape(({
     name: Yup.string().required('Обязательно')
 }))
 
-export const UserForm : React.FC<Props> = (className ='', data:AppState.userTypes) =>{
-
+// export const UserForm : React.FC<Props> = (className , data) =>{
+export const UserForm : React.FC<Props> = (data,className) =>{
+const dispatch = useDispatch()
 
     const { errors, values, submitForm, handleChange } = useFormik<AppState.userTypesAddForm>({
         initialValues: {
 
-            name: "",
-            age: "",
-            email:""
+            name: data.data?.name ?? '',
+            age:  data.data?.age ?? '',
+            email: data.data?.email ?? ''
         },
+
         validationSchema: schema,
         onSubmit: async (fields) => {
             try {
                 const data = {data: {...values}}
-                addUser(data);
+               dispatch(addUser(data))
+                browserHistory.push("/")
                // await addUser(data)
             }
             catch (e) {
-                alert("asd") //todo dispatch(ERROR)
+                alert("Ошибка") //todo dispatch(ERROR)
             }
         }
     })
-    // const handlerSubmit: MouseEventHandler<HTMLButtonElement> = event => {
-    //     event.preventDefault()
-    //     submitForm().catch()
-    // }
+
 
     return (
         <form className ={b()} onSubmit={submitForm}>

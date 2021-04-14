@@ -23,7 +23,7 @@ export declare namespace AppState {
     }
 
     interface State {
-        isLoading: boolean;
+        loading: boolean;
         data?: userTypes[]
         error: string
     }

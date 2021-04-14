@@ -3,7 +3,7 @@ import {AppState} from "./userTypes";
 import {AppActionEnum} from "./appActionEnum";
 
 const initState: AppState.State = {
-    isLoading: false,
+    loading: false,
     data:[],
     error:""
     }
