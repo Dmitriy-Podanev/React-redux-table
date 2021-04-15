@@ -49,16 +49,17 @@ const dispatch = useDispatch()
             try {
                // console.log(!data==null)
                 console.log(data)// todo неправильно распределяет Нужно грамотное условие
+                const dataM = {data:{...fields}}
                 if(data){
                     console.log(1)
 
-                     dispatch(UpdateUser(data))
+                     dispatch(UpdateUser({...data,...dataM}))
 
                 }
                 else{
                     console.log(2)
 
-                    const dataM = {data:{...fields}}
+
                      dispatch(addUser(dataM))
 
                 }

@@ -11,7 +11,7 @@ export const addUser =  (data: object)  => {
 
         try {
 
-            // await axios.put("http://178.128.196.163:3000/api/records", data, ) //todo выбрать лучший метод
+            
             await axios({
                 method: 'PUT',
                 url: 'http://178.128.196.163:3000/api/records',
