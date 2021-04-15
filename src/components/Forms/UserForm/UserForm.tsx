@@ -28,16 +28,18 @@ const schema : Yup.SchemaOf<AppState.userTypesAddForm> = Yup.object().shape(({
 }))
 
 // export const UserForm : React.FC<Props> = (className , data) =>{
-export const UserForm : React.FC<Props> = (data,className) =>{
+export const UserForm : React.FC<Props> = ({data,className}) =>{
 const dispatch = useDispatch()
 
     const { errors, values, submitForm, handleChange } = useFormik<AppState.userTypesAddForm>({
         initialValues: {
 
-
-                age: data.data?.data.age ?? '',
-                name: data.data?.data.name ?? '',
-                email: data.data?.data.email ?? ''
+                age: data?.data.age ?? '',
+                name: data?.data.name ?? '',
+                email: data?.data.email?? ''
+                // age: data.data?.data.age ?? '',
+                // name: data.data?.data.name ?? '',
+                // email: data.data?.data.email ?? ''
 
 
         },
@@ -47,10 +49,10 @@ const dispatch = useDispatch()
             try {
                // console.log(!data==null)
                 console.log(data)// todo неправильно распределяет Нужно грамотное условие
-                if(!data==null){
+                if(data){
                     console.log(1)
 
-                     dispatch(UpdateUser(data.data))
+                     dispatch(UpdateUser(data))
 
                 }
                 else{
