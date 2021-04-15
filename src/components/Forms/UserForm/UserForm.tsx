@@ -1,20 +1,19 @@
-import { block } from "bem-cn";
-import React, {useEffect} from "react";
+import {block} from "bem-cn";
+import React from "react";
 
 import * as Yup from 'yup'
 import {AppState} from "../../../store/app/userTypes";
 import {useFormik} from "formik";
 import {addUser} from "../../../store/app/userApi/addUser";
 import {browserHistory} from "../../../browserHistory";
-import axios from "axios";
-import {RouteComponentProps} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {UsersFetch} from "../../../store/app/userApi/usersFetch";
+import { UpdateUser } from "../../../store/app/userApi/UpdateUser";
+// import {UpdateUser} from "../../../store/app/userApi/UpdateUser";
 
 
 interface Props {
     className?: string;
-     data: AppState.userTypesAddForm | null;
+     data: AppState.userTypes | null;
     // data: object
 }
 
@@ -35,18 +34,32 @@ const dispatch = useDispatch()
     const { errors, values, submitForm, handleChange } = useFormik<AppState.userTypesAddForm>({
         initialValues: {
 
-            name: data.data?.name ?? '',
-            age:  data.data?.age ?? '',
-            email: data.data?.email ?? ''
+
+                age: data.data?.data.age ?? '',
+                name: data.data?.data.name ?? '',
+                email: data.data?.data.email ?? ''
+
+
         },
 
         validationSchema: schema,
         onSubmit: async (fields) => {
             try {
-                
-                const data = {data: {...values}}
-               dispatch(addUser(data))
-                browserHistory.push("/")
+                let id : string | undefined;
+                if(data){
+                    id = data.data?._id
+
+                    await UpdateUser(id,data.data)
+                    browserHistory.push("/");
+                }
+                else{
+                     await addUser(fields)
+                    browserHistory.push("/");
+                }
+
+                // const data = {data: {...values}}
+               //dispatch(addUser(data))
+              //  browserHistory.push("/")
                // await addUser(data)
             }
             catch (e) {

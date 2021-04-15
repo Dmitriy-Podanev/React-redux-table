@@ -6,7 +6,7 @@ export declare namespace AppState {
 
 
     interface userTypes{
-        _id: number,
+        _id: string,
         data:{
             name:string,
             email:string,

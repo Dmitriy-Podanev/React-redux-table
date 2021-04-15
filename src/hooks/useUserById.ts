@@ -5,7 +5,7 @@ import {AppState} from "../store/app/userTypes";
 
 
 interface useUserById {
-     data: AppState.userTypesAddForm | null
+     data: AppState.userTypes | null
      loading: boolean;
      setId: (id: string) => void
     // dataM: object
@@ -14,7 +14,7 @@ interface useUserById {
 export const UseUserById = (defaultId?: string): useUserById => {
     // const [loading, setLoading] = useState<boolean>(false)
     const [loading, setLoading] = useState<boolean>(false)
-    const [data, setData] = useState< AppState.userTypesAddForm |null >(null)
+    const [data, setData] = useState< AppState.userTypes |null >(null)
     const [id, setId] = useState<string | undefined>(defaultId);
 
     useEffect(() => {

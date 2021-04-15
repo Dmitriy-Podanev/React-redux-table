@@ -10,7 +10,7 @@ import {browserHistory} from "../../../browserHistory";
 
 
 
-export const deleteUser =  (id: number)  => {
+export const deleteUser =  (id: string)  => {
     return async (dispatch:Dispatch<AppState.userAction.All>) => {
         try {
 
