@@ -45,22 +45,22 @@ const dispatch = useDispatch()
         validationSchema: schema,
         onSubmit: async (fields) => {
             try {
-                let id : string | undefined;
-                if(data){
-                    id = data.data?._id
+               // console.log(!data==null)
+                console.log(data)// todo неправильно распределяет Нужно грамотное условие
+                if(!data==null){
+                    console.log(1)
 
-                    await UpdateUser(id,data.data)
-                    browserHistory.push("/");
+                     dispatch(UpdateUser(data.data))
+
                 }
                 else{
-                     await addUser(fields)
-                    browserHistory.push("/");
-                }
+                    console.log(2)
 
-                // const data = {data: {...values}}
-               //dispatch(addUser(data))
-              //  browserHistory.push("/")
-               // await addUser(data)
+                    const dataM = {data:{...fields}}
+                     dispatch(addUser(dataM))
+
+                }
+                browserHistory.push("/");
             }
             catch (e) {
                 alert("Ошибка") //todo dispatch(ERROR)
@@ -74,7 +74,7 @@ const dispatch = useDispatch()
             <input type="name" name={"name"} value={values.name} onChange={handleChange}/>
             <input type="age" name={"age"} value={values.age} onChange={handleChange}/>
             <input type="email" name={"email"} value={values.email} onChange={handleChange}/>
-            <button type="submit">Добавить</button>
+            <button type="submit">Сохранить</button>
         </form>
     )
 }

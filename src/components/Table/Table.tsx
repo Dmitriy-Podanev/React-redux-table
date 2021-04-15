@@ -40,11 +40,13 @@ export const Table: React.FC<Props> = () => {
                 userState.data?.map(itemKey => {
 
                     return (
+
                         <tr key={itemKey._id}>
+
                             <td> {itemKey._id}</td>
-                            <td>{itemKey.data.name}</td>
-                            <td>{itemKey.data.age}</td>
-                            <td>{itemKey.data.email}</td>
+                            <td>{itemKey.data.name ?? ""}</td>
+                            <td>{itemKey.data.age ?? ""}</td>
+                            <td>{itemKey.data.email ?? ""}</td>
                             <td><button onClick={()=> nextPath(`/userForm/${itemKey._id}`)}>Edit</button></td>
                             <td><button onClick={()=> {dispatch(deleteUser(itemKey._id))}}>Delete</button></td>
 
