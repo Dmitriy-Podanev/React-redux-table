@@ -43,6 +43,7 @@ const dispatch = useDispatch()
         validationSchema: schema,
         onSubmit: async (fields) => {
             try {
+                
                 const data = {data: {...values}}
                dispatch(addUser(data))
                 browserHistory.push("/")
@@ -57,9 +58,9 @@ const dispatch = useDispatch()
 
     return (
         <form className ={b()} onSubmit={submitForm}>
-            <input type="name" name={"name"} onChange={handleChange}/>
-            <input type="age" name={"age"} onChange={handleChange}/>
-            <input type="email" name={"email"} onChange={handleChange}/>
+            <input type="name" name={"name"} value={values.name} onChange={handleChange}/>
+            <input type="age" name={"age"} value={values.age} onChange={handleChange}/>
+            <input type="email" name={"email"} value={values.email} onChange={handleChange}/>
             <button type="submit">Добавить</button>
         </form>
     )

@@ -18,19 +18,20 @@ export const UseUserById = (defaultId?: string): useUserById => {
     const [id, setId] = useState<string | undefined>(defaultId);
 
     useEffect(() => {
-        if (id === undefined) return
-          setData(null)
+            if (id === undefined) return
+        setData(null)
         // setId("")
-         setLoading(true)
-
+        setLoading(true)
 
         GetUserByID(id)
             .then(setData)
             .catch(console.error)
             .then(() => setLoading(false))
+
     }, [id]);
 
     return {
+
         data,
         loading,
         setId
