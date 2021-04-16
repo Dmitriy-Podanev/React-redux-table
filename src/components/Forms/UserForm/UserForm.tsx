@@ -37,9 +37,7 @@ const dispatch = useDispatch()
                 age: data?.data.age ?? '',
                 name: data?.data.name ?? '',
                 email: data?.data.email?? ''
-                // age: data.data?.data.age ?? '',
-                // name: data.data?.data.name ?? '',
-                // email: data.data?.data.email ?? ''
+
 
 
         },
