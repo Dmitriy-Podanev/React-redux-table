@@ -16,8 +16,8 @@ export const UpdateUser =  (data: AppState.userTypes | null)  => {
             await axios({
                 method: 'POST',
                 url: `http://178.128.196.163:3000/api/records/${data?._id}`,
-                data: data?.data
-            }); //todo Не работает API
+                data: data
+            });
             const response = await axios.get("http://178.128.196.163:3000/api/records")
 
             const res:AppState.userTypes[] = response.data

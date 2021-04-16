@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9746779d-9970-4c25-9e8d-8b50a9502c79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/UserForm/UserForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/UserForm/UserForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/app/userApi/UpdateUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/app/userApi/UpdateUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/app/userApi/addUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/app/userApi/addUser.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,8 @@
       <workItem from="1618326347679" duration="5302000" />
       <workItem from="1618333557985" duration="1059000" />
       <workItem from="1618342210911" duration="18689000" />
-      <workItem from="1618482625642" duration="10605000" />
+      <workItem from="1618482625642" duration="11201000" />
+      <workItem from="1618563890664" duration="943000" />
     </task>
     <servers />
   </component>
@@ -119,22 +118,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1616837110041" />
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom" timestamp="1618493573882">
+    <state width="1493" height="192" key="GridCell.Tab.0.bottom" timestamp="1618564774773">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618493573882" />
-    <state width="1493" height="192" key="GridCell.Tab.0.center" timestamp="1618493573882">
+    <state width="1493" height="192" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618564774773" />
+    <state width="1493" height="192" key="GridCell.Tab.0.center" timestamp="1618564774773">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618493573882" />
-    <state width="1493" height="192" key="GridCell.Tab.0.left" timestamp="1618493573881">
+    <state width="1493" height="192" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618564774773" />
+    <state width="1493" height="192" key="GridCell.Tab.0.left" timestamp="1618564774773">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618493573881" />
-    <state width="1493" height="192" key="GridCell.Tab.0.right" timestamp="1618493573882">
+    <state width="1493" height="192" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618564774773" />
+    <state width="1493" height="192" key="GridCell.Tab.0.right" timestamp="1618564774773">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618493573882" />
+    <state width="1493" height="192" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618564774773" />
     <state x="568" y="42" key="RollbackChangesDialog" timestamp="1617809900152">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -147,10 +146,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1617834141618" />
-    <state x="440" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1618482624236">
+    <state x="440" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1618564137363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="440" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1618482624236" />
+    <state x="440" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1618564137363" />
     <state x="814" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1618346623211">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
